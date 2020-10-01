@@ -1,3 +1,5 @@
+const PORT = process.env.PORT || 4000;
+
 const path = require('path');
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -11,4 +13,4 @@ app.set('views', path.join(__dirname, 'views'))
    .use(express.static(path.join(__dirname, "public")))
    .use(cRoutes);
 
-app.listen(4000);
+app.listen(PORT);
